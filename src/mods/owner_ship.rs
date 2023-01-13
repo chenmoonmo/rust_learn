@@ -1,8 +1,13 @@
+use std::ops::Add;
+
 pub fn owner_ship() {
     let x = 5;
     let y = 5;
     // 对于基本类型或是储存在栈上的类型，赋值语句实际发生的是浅拷贝。但因为数据在栈上，比较简单，因此不会有所有权问题。
     let z = x; 
+
+    let ss = "hello";
+    let ss2 = ss;
     
     let s = String::from("hello world");
     // Rust 不会主动深克隆，只能主动调用 clone 方法。
@@ -12,6 +17,20 @@ pub fn owner_ship() {
 
     println!("{},{},{}",x,y,z);
     println!("{},{}",s2,s3);
+    println!("{},{}",ss,ss2);
     // println!("{}",s);
+    owner_ship_at_fn();
+}
+
+ fn string_concat_5 (s:String) -> String {
+    s.add("5")
+}
+
+fn owner_ship_at_fn (){
+    let mut s = String::from("5555");
+    s = string_concat_5(s);
+
+    println!("{}",s);
+
 
 }
