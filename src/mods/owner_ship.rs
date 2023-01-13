@@ -28,6 +28,7 @@ pub fn owner_ship() {
 
 fn owner_ship_at_fn (){
     let mut s = String::from("5555");
+    //  向函数传递参数会移交所有权，函数的返回值也有所有权
     s = string_concat_5(s);
 
     println!("{}",s);
