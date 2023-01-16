@@ -13,9 +13,9 @@ pub fn borrow() {
 }
 
 
-fn can_not_change (s: &String) {
-    s.push_str(",world"); // 无法修改
-}
+// fn can_not_change (s: &String) {
+//     s.push_str(",world"); // 无法修改
+// }
 
 fn can_change (s:  &mut String) {
     s.push_str(",world"); 

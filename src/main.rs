@@ -1,8 +1,5 @@
-
 mod mods;
 
 fn main() {
-    // mods::penguin::penguin();
-    mods::owner_ship::owner_ship();
-    mods::borrow::borrow();
+    mods::about_impl::about_impl();
 }
